@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Language Translator</title>
+    <!-- Adding a modern Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🌐 Polyglot Translator</h1>
+            <p>Seamlessly translate text across 50+ languages</p>
+        </header>
+
+        <div class="translator-grid">
+            <!-- Left Side: Input -->
+            <div class="panel input-panel">
+                <div class="panel-header">
+                    <label for="sourceLang">Translate From</label>
+                    <select id="sourceLang"></select>
+                </div>
+                <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            </div>
+
+            <!-- Right Side: Output -->
+            <div class="panel output-panel">
+                <div class="panel-header">
+                    <label for="targetLang">Translate To</label>
+                    <select id="targetLang"></select>
+                </div>
+                <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
+                
+                <div class="action-row">
+                    <button class="secondary-btn copy-btn" onclick="copyText()" title="Copy Translation">
+                        📋 Copy
+                    </button>
+                    <button class="secondary-btn speak-btn" onclick="speakText()" title="Text to Speech">
+                        🔊 Listen
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button id="translateBtn" class="translate-btn" onclick="translateText()">
+            ✨ Translate Text
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
